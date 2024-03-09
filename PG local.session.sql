@@ -1,6 +1,6 @@
 CREATE TABLE Students (
   StudentID SERIAL PRIMARY KEY,
-  ClassID INT,
+  GroupID INT,
   FirstName VARCHAR(50),
   LastName VARCHAR(50),
   Email VARCHAR(50),
@@ -11,7 +11,7 @@ CREATE TABLE Schedule (
   ScheduleID SERIAL PRIMARY KEY,
   SubjectID INT,
   TeacherID INT,
-  ClassID VARCHAR(16),
+  GroupID VARCHAR(16),
   StartTime TIME,
   EndTime TIME
 );
@@ -24,10 +24,9 @@ CREATE TABLE Teachers (
   "password" VARCHAR(50)
 );
 
-CREATE TABLE Classes (
-  ClassID SERIAL PRIMARY KEY,
-  TeacherID INT,
-  ClassName VARCHAR(4)
+CREATE TABLE Groups (
+  GroupID SERIAL PRIMARY KEY,
+  GroupName VARCHAR(4)
 );
 
 CREATE TABLE Grades (
