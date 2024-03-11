@@ -11,7 +11,8 @@ CREATE TABLE Schedule (
   ScheduleID SERIAL PRIMARY KEY,
   SubjectID INT,
   TeacherID INT,
-  GroupID VARCHAR(16),
+  GroupID INT,
+  "weekday" VARCHAR(10),
   StartTime TIME,
   EndTime TIME
 );
